@@ -1,9 +1,15 @@
-/* Reset styling */
-body, ul {
-    margin: 0;
-    padding: 0;
+/* Background Video */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
 }
 
+/* General Page Styling */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -17,7 +23,7 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #222;
+    background-color: rgba(34, 34, 34, 0.8);
 }
 
 /* Centering the logo */
@@ -27,18 +33,18 @@ header {
     margin: 0 auto;
 }
 
-/* Navigation bar */
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: center;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8);
     padding: 15px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px; /* Spacing between nav items */
+    gap: 15px;
 }
 
 nav ul li {
@@ -46,7 +52,7 @@ nav ul li {
 }
 
 /* Button style for nav links */
-nav ul li a {
+.nav-btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #ff6600;
@@ -57,7 +63,7 @@ nav ul li a {
     transition: background 0.3s;
 }
 
-nav ul li a:hover {
+.nav-btn:hover {
     background-color: #cc5500;
 }
 
@@ -66,18 +72,39 @@ nav ul li a:hover {
     padding: 50px 20px;
 }
 
-/* Existing button styling */
-.btn {
+/* Project Cards */
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.social-links a {
     display: inline-block;
+    margin: 10px;
     padding: 10px 20px;
     background-color: #ff6600;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
 }
 
-.btn:hover {
+.social-links a:hover {
     background-color: #cc5500;
 }
