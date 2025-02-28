@@ -95,3 +95,8 @@ img[src$=".png"] {
     border-radius: 5px !important; /* Optional: rounded corners */
 }
 
+.nav-btn {
+    position: relative;  /* Ensures no elements cover it */
+    z-index: 10; /* Make sure it's above other elements */
+    pointer-events: auto; /* Ensures clicks are registered */
+}
