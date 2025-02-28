@@ -95,19 +95,22 @@ nav ul li {
     flex-wrap: wrap;
 }
 
-/* 🔥 Thumbnail PNG Images 🔥 */
+/* 🔥 Thumbnail PNG Images (Default for All) 🔥 */
 img[src$=".png"] {
     width: 100px !important;
     height: 100px !important;
-    object-fit: cover !important;
+    object-fit: cover !important; /* This is cutting off images */
     display: block !important;
     margin: auto !important;
-    border-radius: 5px !important; /* Optional: rounded corners */
+    border-radius: 5px !important; /* Optional rounded corners */
 }
-/* 🎯 Exempt the specific image from the thumbnail rule */
+
+/* 🎯 Exclude Specific Image from Thumbnail Resizing */
 .full-size {
     width: auto !important;
     height: auto !important;
-    max-width: 100%; /* Ensures it doesn’t overflow */
-    object-fit: contain !important;
+    max-width: 100% !important; /* Ensures it doesn’t overflow */
+    object-fit: contain !important; /* Prevents cropping */
+    display: block !important;
+    margin: auto !important;
 }
