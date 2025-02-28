@@ -1,35 +1,3 @@
-/* 🔥 Background Video - Full Page 🔥 */
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-}
-
-/* 🔥 Ensure Body Covers Full Page 🔥 */
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    color: white !important; /* Force White Text */
-    background-color: black; /* Fallback */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; /* Fix left-align issue */
-}
-
-/* 🔥 Centered Logo 🔥 */
-.logo img {
-    height: 80px;
-    display: block;
-    margin: 0 auto;
-}
-
 /* 🔥 Navigation Bar 🔥 */
 nav {
     display: flex;
@@ -55,52 +23,35 @@ nav ul li {
     display: inline;
 }
 
-/* 🔥 Buttons for Nav Links 🔥 */
+/* 🔥 Image Buttons for Nav Links 🔥 */
 .nav-btn {
     display: inline-block;
-    width: 100px;  /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
-    background-size: cover;
+    width: 100px;  /* Set button width */
+    height: 100px; /* Set button height */
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
-    border: none;
     text-indent: -9999px; /* Hide text */
+    overflow: hidden;
+    border: none;
 }
 
+/* 🔥 Specific Background Images 🔥 */
 .nav-btn.github {
-    background-image: url('path-to-your-github-image.png');
+    background-image: url('your-image-folder/github-image.png'); /* Replace with actual path */
 }
 
 .nav-btn.shop {
-    background-image: url('path-to-your-shop-image.png');
+    background-image: url('your-image-folder/shop-image.png'); /* Replace with actual path */
 }
 
 .nav-btn.contact {
-    background-image: url('path-to-your-contact-image.png');
+    background-image: url('your-image-folder/contact-image.png'); /* Replace with actual path */
 }
 
-
-/* 🔥 Hero Section 🔥 */
-#hero {
-    position: relative;
-    z-index: 2;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-/* 🔥 Project Grid 🔥 */
-.project-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* 🔥 Thumbnail PNG Images 🔥 */
-img[src$=".png"] {
-    width: 100px !important;
-    height: 100px !important;
-    object-fit: cover !important;
-    display: block !important;
-    margin: auto !important;
-    border-radius: 5px !important; /* Optional: rounded corners */
+/* 🔥 Remove Underline on Links 🔥 */
+.nav-btn:link,
+.nav-btn:visited {
+    text-decoration: none;
+    display: inline-block;
 }
