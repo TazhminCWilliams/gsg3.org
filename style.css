@@ -56,6 +56,27 @@ nav ul li {
 }
 
 /* 🔥 Buttons for Nav Links 🔥 */
+.nav-btn {
+    display: inline-block;
+    width: 100px;  /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    background-size: cover;
+    background-position: center;
+    border: none;
+    text-indent: -9999px; /* Hide text */
+}
+
+.nav-btn.github {
+    background-image: url('path-to-your-github-image.png');
+}
+
+.nav-btn.shop {
+    background-image: url('path-to-your-shop-image.png');
+}
+
+.nav-btn.contact {
+    background-image: url('path-to-your-contact-image.png');
+}
 
 
 /* 🔥 Hero Section 🔥 */
