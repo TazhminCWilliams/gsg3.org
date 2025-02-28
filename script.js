@@ -27,9 +27,22 @@ document.addEventListener("DOMContentLoaded", function () {
     sections.forEach(section => {
         observer.observe(section);
     });
-});
-document.querySelectorAll(".nav-btn").forEach(button => {
-    button.addEventListener("click", function(event) {
-        window.open(this.href, "_blank"); // Force open in new tab
+
+    // PNG image resizing (excluding .project-card images)
+    document.querySelectorAll("img[src$='.png']").forEach(img => {
+        if (!img.closest(".project-card")) { 
+            img.style.width = "150px";  // Thumbnail size
+            img.style.height = "auto";
+        }
+    });
+
+    // Open links in a new tab for navigation buttons (if they are <a> elements)
+    document.querySelectorAll(".nav-btn").forEach(button => {
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+            if (this.tagName === "A") {
+                window.open(this.href, "_blank"); // Force open in a new tab
+            }
+        });
     });
 });
