@@ -54,23 +54,7 @@ nav ul li {
 }
 
 /* 🔥 Buttons for Nav Links 🔥 */
-.nav-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6600;
-    color: white !important;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
-    position: relative;  /* Ensures no elements cover it */
-    z-index: 10; /* Make sure it's above other elements */
-    pointer-events: auto; /* Ensures clicks are registered */
-}
 
-.nav-btn:hover {
-    background-color: #cc5500;
-}
 
 /* 🔥 Hero Section 🔥 */
 #hero {
