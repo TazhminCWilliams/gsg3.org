@@ -63,6 +63,9 @@ nav ul li {
     border-radius: 5px;
     font-weight: bold;
     transition: background 0.3s;
+    position: relative;  /* Ensures no elements cover it */
+    z-index: 10; /* Make sure it's above other elements */
+    pointer-events: auto; /* Ensures clicks are registered */
 }
 
 .nav-btn:hover {
@@ -93,10 +96,4 @@ img[src$=".png"] {
     display: block !important;
     margin: auto !important;
     border-radius: 5px !important; /* Optional: rounded corners */
-}
-
-.nav-btn {
-    position: relative;  /* Ensures no elements cover it */
-    z-index: 10; /* Make sure it's above other elements */
-    pointer-events: auto; /* Ensures clicks are registered */
 }
