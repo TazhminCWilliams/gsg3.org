@@ -82,4 +82,15 @@ nav ul li {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+}
+
+/* 🔥 Thumbnail PNG Images 🔥 */
+img[src$=".png"] {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Ensures images fit within the box */
+    display: block;
+    margin: auto;
+    border-radius: 5px; /* Optional: rounded corners */
+}
