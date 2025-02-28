@@ -8,6 +8,12 @@
     object-fit: cover;
     z-index: -1;
 }
+@font-face {
+    font-family: 'ComicalCartoon';
+    src: url('path-to-your-font/Comical Cartoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* 🔥 Ensure Body Covers Full Page 🔥 */
 body, html {
@@ -21,6 +27,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     text-align: center; /* Fix left-align issue */
+    font-family: 'ComicalCartoon', sans-serif; /* Fallback to sans-serif */
 }
 
 /* 🔥 Centered Logo 🔥 */
