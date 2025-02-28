@@ -104,3 +104,10 @@ img[src$=".png"] {
     margin: auto !important;
     border-radius: 5px !important; /* Optional: rounded corners */
 }
+/* 🎯 Exempt the specific image from the thumbnail rule */
+.full-size {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100%; /* Ensures it doesn’t overflow */
+    object-fit: contain !important;
+}
