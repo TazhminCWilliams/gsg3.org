@@ -28,3 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(section);
     });
 });
+document.querySelectorAll(".nav-btn").forEach(button => {
+    button.addEventListener("click", function(event) {
+        window.open(this.href, "_blank"); // Force open in new tab
+    });
+});
