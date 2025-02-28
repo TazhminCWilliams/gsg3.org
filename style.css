@@ -1,4 +1,4 @@
- /* 🔥 Background Video - Full Page 🔥 */
+/* 🔥 Background Video - Full Page 🔥 */
 #bg-video {
     position: fixed;
     top: 0;
@@ -8,26 +8,45 @@
     object-fit: cover;
     z-index: -1;
 }
+
+/* 🔥 Load Custom Font 🔥 */
 @font-face {
     font-family: 'ComicalCartoon';
-    src: url('path-to-your-font/Comical Cartoon.ttf') format('truetype');
+    src: url('fonts/Comical Cartoon.ttf') format('truetype'); /* Ensure correct path */
     font-weight: normal;
     font-style: normal;
 }
 
-/* 🔥 Ensure Body Covers Full Page 🔥 */
+/* 🔥 Full-Page Styling 🔥 */
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    color: white !important; /* Force White Text */
-    background-color: black; /* Fallback */
+    color: white !important;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Fix left-align issue */
-    font-family: 'ComicalCartoon', sans-serif; /* Fallback to sans-serif */
+    text-align: center;
+    font-family: 'ComicalCartoon', sans-serif;
+}
+
+/* 🔥 Hide Scrollbar but Keep Scrolling 🔥 */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0px; /* Hides scrollbar in Chrome, Edge, Safari */
+}
+
+body {
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
 }
 
 /* 🔥 Centered Logo 🔥 */
@@ -50,14 +69,6 @@ nav {
     z-index: 1000;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(51, 51, 51, 0.8);
-    padding: 15px;
-    gap: 15px;
-}
-
 nav ul {
     list-style: none;
     display: flex;
@@ -69,7 +80,7 @@ nav ul li {
     display: inline;
 }
 
-/* Button Style for Nav Links */
+/* 🔥 Button Style for Nav Links 🔥 */
 .nav-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -85,23 +96,23 @@ nav ul li {
     background-color: #cc5500;
 }
 
-
+/* 🔥 Hero Section 🔥 */
 #hero {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 50vh; /* Ensures the section has enough space */
+    min-height: 50vh;
     padding: 20px;
 }
 
-/* 🔥 Ensure Hero Image is NOT Affected 🔥 */
+/* 🔥 Ensure Hero Image Resizes Correctly 🔥 */
 #hero img.full-size {
     width: auto !important;
     height: auto !important;
-    max-width: 80% !important; /* Ensures it resizes correctly */
-    object-fit: contain !important; /* Prevents cropping */
+    max-width: 80% !important;
+    object-fit: contain !important;
     display: block !important;
     margin: auto !important;
 }
@@ -119,8 +130,8 @@ nav ul li {
     flex-wrap: wrap;
 }
 
-/* 🔥 Thumbnail PNG Images (Default for All but NOT Hero) 🔥 */
-img[src$=".png"]:not(.full-size) {
+/* 🔥 PNG Thumbnail Styling (Only for Small Thumbnails) 🔥 */
+img.thumbnail {
     width: 100px !important;
     height: 100px !important;
     object-fit: cover !important;
@@ -129,11 +140,12 @@ img[src$=".png"]:not(.full-size) {
     border-radius: 5px !important;
 }
 
+/* 🔥 Full-Size Image Protection 🔥 */
 .full-size {
     width: auto !important;
     height: auto !important;
-    max-width: 100% !important; /* Ensures it resizes correctly */
-    object-fit: contain !important; /* Prevents cropping */
+    max-width: 100% !important;
+    object-fit: contain !important;
     display: block !important;
     margin: auto !important;
 }
