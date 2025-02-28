@@ -105,11 +105,10 @@ img[src$=".png"] {
     border-radius: 5px !important; /* Optional rounded corners */
 }
 
-/* 🎯 Exclude Specific Image from Thumbnail Resizing */
 .full-size {
     width: auto !important;
     height: auto !important;
-    max-width: 100% !important; /* Ensures it doesn’t overflow */
+    max-width: 100% !important; /* Ensures it resizes correctly */
     object-fit: contain !important; /* Prevents cropping */
     display: block !important;
     margin: auto !important;
