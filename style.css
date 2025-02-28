@@ -87,10 +87,11 @@ nav ul li {
 
 /* 🔥 Thumbnail PNG Images 🔥 */
 img[src$=".png"] {
-    width: 100px;
-    height: 100px;
-    object-fit: cover; /* Ensures images fit within the box */
-    display: block;
-    margin: auto;
-    border-radius: 5px; /* Optional: rounded corners */
+    width: 100px !important;
+    height: 100px !important;
+    object-fit: cover !important;
+    display: block !important;
+    margin: auto !important;
+    border-radius: 5px !important; /* Optional: rounded corners */
 }
+
